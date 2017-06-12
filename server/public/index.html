@@ -17,8 +17,9 @@
       <!-- rows are 12 col wide -->
       <div class="row" ng-controller="GalleryController as gallery" ng-cloak>
         <!-- ng-repeat over this content -->
-        <div ng-repeat="entry in gallery.photos">
-          {{entry.likes}}
+        <div class="col-md-6 col-lg-4" ng-repeat="entry in gallery.photos">
+          <img class="img-responsive" ng-src="{{entry.path}}"
+               alt="{{entry.description}}">
         </div>
         <!-- 4/12 of the screen -->
         <!-- <div class="col-md-6">
