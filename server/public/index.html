@@ -18,8 +18,12 @@
       <div class="row" ng-controller="GalleryController as gallery" ng-cloak>
         <!-- ng-repeat over this content -->
         <div class="col-md-6 col-lg-4" ng-repeat="entry in gallery.photos">
-          <img class="img-responsive" ng-src="{{entry.path}}"
-               alt="{{entry.description}}">
+          <div class="card" ng-click="gallery.hideShow(entry)">
+            <span class="quote" ng-show="entry.showText">{{entry.description}}</span>
+            <img ng-class="{'vis-hidden': entry.showText}" class="img-responsive" ng-src="{{entry.path}}"
+                 alt="{{entry.description}}">
+          </div>
+
         </div>
         <!-- 4/12 of the screen -->
         <!-- <div class="col-md-6">

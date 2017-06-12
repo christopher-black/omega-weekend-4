@@ -8,7 +8,7 @@ The Gallery of My Life and Glacier National Park
 - [x] Add bootstrap to make responsive
 - [x] Add Angular controller
 - [x] Replace HTML with ng-repeat and ng-src
-- [ ] Swap image with the description
+- [x] Swap image with the description
 - [ ] Add like button and functionality (views)
 
 **Stretch**
