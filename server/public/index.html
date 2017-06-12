@@ -23,7 +23,9 @@
             <img ng-class="{'vis-hidden': entry.showText}" class="img-responsive" ng-src="{{entry.path}}"
                  alt="{{entry.description}}">
           </div>
-
+          <div class="callout button-style" ng-click="gallery.like(entry)">
+            Likes: {{entry.likes}} Views: {{entry.views}}
+          </div>
         </div>
         <!-- 4/12 of the screen -->
         <!-- <div class="col-md-6">

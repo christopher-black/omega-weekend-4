@@ -7,9 +7,17 @@ app.controller('GalleryController', function(){
   var gallery = this;
   gallery.photos = placeholder.data;
   gallery.hideShow = hideShow;
+  gallery.like = like;
 
   function hideShow(entry) {
     console.log(entry);
     entry.showText = !entry.showText;
+    if(entry.showText) {
+      entry.views++;
+    }
+  }
+
+  function like(entry) {
+    entry.likes++;
   }
 });

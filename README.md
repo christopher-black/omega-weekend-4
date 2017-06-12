@@ -9,7 +9,7 @@ The Gallery of My Life and Glacier National Park
 - [x] Add Angular controller
 - [x] Replace HTML with ng-repeat and ng-src
 - [x] Swap image with the description
-- [ ] Add like button and functionality (views)
+- [x] Add like button and functionality (views)
 
 **Stretch**
 - [ ] Heroku
