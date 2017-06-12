@@ -12,6 +12,7 @@ The Gallery of My Life and Glacier National Park
 - [x] Add like button and functionality (views)
 
 **Stretch**
+- [x] Comments
 - [ ] Heroku
 - [ ] Server side routes ($http)
 
@@ -170,3 +171,54 @@ Next we'll output all images and descriptions to the screen. Hide and show will 
 ```
 
 > Commit our changes
+
+## Hide and show
+
+**index.html**
+
+```HTML
+<!-- Inside our controller, add the following -->
+<div class="col-sm-6 col-lg-4" ng-repeat="entry in gallery.photos">
+  <div class="card">
+    <div class="button-style" ng-click="gallery.hideShow(entry)">
+      <span ng-show="entry.showText"
+            class="quote">"{{entry.description}}"</span>
+      <img ng-class="{'vis-hidden': entry.showText}"
+           class="img-responsive"
+           ng-src="{{entry.path}}"
+           alt="{{entry.description}}">
+    </div>
+  </div>
+</div>
+```
+
+**client.js**
+
+```JavaScript
+var app = angular.module('myApp', []);
+
+app.controller('GalleryController', function(){
+  console.log('gallery controller running');
+  var gallery = this;
+  // Placeholder data is in data.js
+  gallery.photos = placeholder.data;
+  gallery.hideShow = hideShow;
+
+  function hideShow(image) {
+    image.showText = !image.showText;
+  }
+}]);
+```
+
+> Commit our changes
+
+## Final product
+
+The final product moves data storage to the server but doesn't include a database. That would be the next step.
+
+[https://serene-tor-43441.herokuapp.com/](https://serene-tor-43441.herokuapp.com/)
+
+## Additional resources
+
+- [Deckgrid](https://github.com/akoenig/angular-deckgrid) wasn't used but would have made the layout look better.
+- [Adobe Colors](https://color.adobe.com/Tema-Colore-1-color-theme-9660108/) used for the color pallete.

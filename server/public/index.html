@@ -26,21 +26,16 @@
           <div class="callout button-style" ng-click="gallery.like(entry)">
             Likes: {{entry.likes}} Views: {{entry.views}}
           </div>
+          <div>
+            <input type="text" name="" ng-model="entry.newComment">
+            <button ng-click="gallery.addComment(entry, entry.newComment)">
+              Submit
+            </button>
+            <div ng-repeat="comment in entry.comments">
+              Comment: {{comment}}
+            </div>
+          </div>
         </div>
-        <!-- 4/12 of the screen -->
-        <!-- <div class="col-md-6">
-          Thorin
-          <img src="images/thorin.gif">
-        </div>
-        <div class="col-md-6">
-          2
-        </div>
-        <div class="col-md-6">
-          3
-        </div>
-        <div class="col-md-6">
-          4
-        </div> -->
       </div>
     </div>
   </body>

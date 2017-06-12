@@ -8,6 +8,7 @@ app.controller('GalleryController', function(){
   gallery.photos = placeholder.data;
   gallery.hideShow = hideShow;
   gallery.like = like;
+  gallery.addComment = addComment;
 
   function hideShow(entry) {
     console.log(entry);
@@ -15,6 +16,11 @@ app.controller('GalleryController', function(){
     if(entry.showText) {
       entry.views++;
     }
+  }
+
+  function addComment(entry, newcomment) {
+    entry.comments.push(newcomment);
+    entry.newComment = '';
   }
 
   function like(entry) {
