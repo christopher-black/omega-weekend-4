@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <title>The Gallery of My Life</title>
     <script type="text/javascript" src="vendors/angular.js"></script>
+    <script type="text/javascript" src="scripts/data.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
+  <body ng-app="app">
     <div class="container">
       <header>
         <h1>The Gallery of My Life</h1>
       </header>
       <!-- rows are 12 col wide -->
-      <div class="row">
+      <div class="row" ng-controller="GalleryController as gallery" ng-cloak>
         <!-- ng-repeat over this content -->
+        <div ng-repeat="entry in gallery.photos">
+          {{entry.likes}}
+        </div>
         <!-- 4/12 of the screen -->
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
           Thorin
           <img src="images/thorin.gif">
         </div>
@@ -29,7 +33,7 @@
         </div>
         <div class="col-md-6">
           4
-        </div>
+        </div> -->
       </div>
     </div>
   </body>

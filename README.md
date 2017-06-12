@@ -6,7 +6,7 @@ The Gallery of My Life and Glacier National Park
 - [x] Get our index page to show up and folder structure
 - [x] Create static HTML
 - [x] Add bootstrap to make responsive
-- [ ] Add Angular controller
+- [x] Add Angular controller
 - [ ] Replace HTML with ng-repeat and ng-src
 - [ ] Swap image with the description
 - [ ] Add like button and functionality (views)
