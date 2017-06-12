@@ -4,8 +4,8 @@ The Gallery of My Life and Glacier National Park
 ## TODO
 - [x] Create project folder, init and add .gitignore
 - [x] Get our index page to show up and folder structure
-- [ ] Create static HTML
-- [ ] Add bootstrap to make responsive
+- [x] Create static HTML
+- [x] Add bootstrap to make responsive
 - [ ] Add Angular controller
 - [ ] Replace HTML with ng-repeat and ng-src
 - [ ] Swap image with the description
